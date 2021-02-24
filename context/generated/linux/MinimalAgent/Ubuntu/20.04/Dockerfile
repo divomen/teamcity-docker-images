@@ -71,12 +71,4 @@ RUN mkdir -p /opt/buildagent/work && \
     echo >> /opt/buildagent/system/.teamcity-agent/unpacked-plugins.xml && \
     sed -i -e 's/\r$//' /opt/buildagent/system/.teamcity-agent/unpacked-plugins.xml
 
-VOLUME /data/teamcity_agent/conf
-VOLUME /opt/buildagent/work
-VOLUME /opt/buildagent/system
-VOLUME /opt/buildagent/temp
-VOLUME /opt/buildagent/logs
-VOLUME /opt/buildagent/tools
-VOLUME /opt/buildagent/plugins
-
 CMD ["/run-services.sh"]
